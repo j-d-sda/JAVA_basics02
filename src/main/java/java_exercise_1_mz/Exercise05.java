@@ -1,24 +1,17 @@
 package java_exercise_1_mz;
 
-import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
 
 public class Exercise05 {
     public static void main(String[] args) {
-        ArrayList<String> arrayList = new ArrayList<String>();
+        List<String> names = Arrays.asList("Jacek :-)", "Marta", "Grzegorz", "Paweł", "Piotr");
 
-        arrayList.add("Jacek :-)");
-        arrayList.add("Marta");
-        arrayList.add("Grzegorz");
-        arrayList.add("Paweł");
-        arrayList.add("Piotr");
+        Iterator<String> namesIterator = names.iterator();
 
-        System.out.println("Elements in array list in normal order:");
-
-        int n = arrayList.size();
-        int i = 0;
-
-        while(i < n) {
-            System.out.println(arrayList.get(i++));
+        while(namesIterator.hasNext()) {
+            System.out.println(namesIterator.next());
         }
     }
 }
